@@ -1,0 +1,60 @@
+*{
+    font-size: 25px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-width: 60vh;
+    border-radius: 5px;
+    border: 1px solid orange;
+}
+
+.display{
+    max-width: 60vh;
+    margin: 7px;
+    border-radius: 5px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    word-wrap: break-word;
+    border: 1px solid black;
+}
+
+.upperDisplay,
+.lowerDisplay {
+    padding: 10px;
+    min-height: 40px;
+    word-wrap: break-word; /* Allow word wrapping */
+}
+
+.calculator{
+    display: grid;
+    height: 58vh;
+    width: 60vh;
+}
+
+.erasebtns{
+    display: grid;
+    grid-template-rows: repeat(1, 50px);
+    grid-template-columns: repeat(2, 190px);
+}
+
+
+.gridbtns{
+    display: grid;
+    grid-template-rows: repeat(5, 80px);
+    grid-template-columns: repeat(4, 95px);
+}
+
+button{
+    margin: 4px;
+}
