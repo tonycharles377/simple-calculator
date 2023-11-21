@@ -19,15 +19,24 @@ document.addEventListener('DOMContentLoaded', function(){
 
     operators.forEach((op) => op.addEventListener('click', function(e){
         handleOperator(e.target.textContent);
-        previousScreen.textContent = previousOperand + '' + operator;
+        if(previousOperand == 0){
+            previousScreen.textContent = '0' + '' + operator;
+        }else{
+            previousScreen.textContent = previousOperand + '' + operator;
+        }
     }))
 
     clear.addEventListener('click', function(){
         previousOperand = '';
         currentOperand = '';
         operator = '';
-        currentScreen.textContent = '';
+        currentScreen.textContent = '0';
         previousScreen.textContent = '';
+    })
+
+    backspace.addEventListener('click', function(){
+        currentOperand = currentOperand.slice(0, -1);
+        currentScreen.textContent = currentOperand;
     })
 })
 
