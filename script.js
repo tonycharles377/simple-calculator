@@ -1,6 +1,7 @@
 let previousOperand = '';
 let currentOperand = '';
 let operator = '';
+let result = '';
 
 document.addEventListener('DOMContentLoaded', function(){
     let numbers = document.querySelectorAll('.number');
@@ -29,6 +30,7 @@ document.addEventListener('DOMContentLoaded', function(){
     clear.addEventListener('click', function(){
         previousOperand = '';
         currentOperand = '';
+        result = '';
         operator = '';
         currentScreen.textContent = '0';
         previousScreen.textContent = '';
@@ -37,6 +39,22 @@ document.addEventListener('DOMContentLoaded', function(){
     backspace.addEventListener('click', function(){
         currentOperand = currentOperand.slice(0, -1);
         currentScreen.textContent = currentOperand;
+    })
+
+    equals.addEventListener('click', function(){
+        calculate();
+        if(previousOperand === '' || currentOperand === '' || operator === '' || result === NaN){
+            previousOperand = '';
+            currentOperand = '';
+            result = '';
+            operator = '';
+            currentScreen.textContent = '0';
+            previousScreen.textContent = '';
+        }else{
+            previousScreen.textContent = previousOperand + '' + operator + '' + currentOperand + '' + '=';
+            currentScreen.textContent = result;
+        }
+        
     })
 })
 
@@ -48,6 +66,30 @@ function handleNumber(num){
 
 function handleOperator(op){
     operator = op;
-    previousOperand = currentOperand;
-    currentOperand = '';
+    if(result){
+        previousOperand = result;
+        currentOperand = '';
+    }else{
+        previousOperand = currentOperand;
+        currentOperand = '';
+    }
+}
+
+function calculate(){
+    previousOperand = Number(previousOperand);
+    currentOperand = Number(currentOperand);
+
+    if(operator === '+'){
+        result = previousOperand + currentOperand;
+    }else if(operator === 'x'){
+        result = previousOperand * currentOperand;
+    }else if(operator === '-'){
+        result = previousOperand - currentOperand;
+    }else {
+        result = previousOperand / currentOperand;
+    }
+
+    previousOperand = previousOperand.toString();
+    currentOperand = currentOperand.toString();
+    result = result.toString();
 }
