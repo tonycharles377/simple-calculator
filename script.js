@@ -13,6 +13,8 @@ document.addEventListener('DOMContentLoaded', function(){
     let currentScreen = document.querySelector('.lowerDisplay');
     let previousScreen = document.querySelector('.upperDisplay');
 
+    alert('Developement in progress!');
+
     numbers.forEach((number) => number.addEventListener('click', function(e){
         handleNumber(e.target.textContent);
         currentScreen.textContent = currentOperand;
@@ -93,7 +95,3 @@ function calculate(){
     currentOperand = currentOperand.toString();
     result = result.toString();
 }
-
-document.addEventListener('DOMContentLoaded',function(){
-    alert('Developement in progress!');
-})
