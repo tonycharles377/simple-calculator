@@ -93,3 +93,7 @@ function calculate(){
     currentOperand = currentOperand.toString();
     result = result.toString();
 }
+
+document.addEventListener('DOMContentLoaded',function(){
+    alert('Developement in progress!');
+})
