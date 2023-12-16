@@ -1,22 +1,8 @@
-<h1 align="center">Welcome to calculator 👋</h1>
-<p>
-  <a href="https://www.npmjs.com/package/calculator" target="_blank">
-    <img alt="Version" src="https://img.shields.io/npm/v/calculator.svg">
-  </a>
-</p>
+![Simple Calculator README image](/assets/Simple_Calculator.png)
 
-> The Simple Calculator project is a web application designed to perform basic arithmetic operations. Built using HTML, CSS, and JavaScript, this calculator provides a clean and intuitive user interface for performing addition, subtraction, multiplication, and division.
+> The Simple Calculator project is a coursework project I did while pursuing The Odin Project (https://www.theodinproject.com/) Full-stack Developer Certification. It is a web application that provides a clean and intuitive user interface and it is designed to perform basic arithmetic operations such as addition, subtraction, multiplication, and division. These are the languages I used:
+> 1. HTML
+> 2. CSS
+> 3. JavaScript
 
-### ✨ [Demo](https://tonycharles377.github.io/simple-calculator/)
-
-## Author
-
-👤 **Charles Omondi**
-
-
-## Show your support
-
-Give a ⭐️ if this project helped you!
-
-***
-_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
+### ✨ [Live Demo](https://tonycharles377.github.io/simple-calculator/)
